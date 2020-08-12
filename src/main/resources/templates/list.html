@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Floors</title>
+</head>
+<body>
+<div th:switch="${floors}">
+    <h2 th:case="null">No floors found!</h2>
+    <div th:case="*">
+        <h2>Floors</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>A1</th>
+                <th>B1</th>
+                <th>A2</th>
+                <th>B2</th>
+                <th>A3</th>
+                <th>B3</th>
+                <th>A4</th>
+                <th>B4</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="floor : ${floors}">
+                <td th:text="${floor.id}"></td>
+                <td th:text="${floor.a}"></td>
+                <td th:text="${floor.b}"></td>
+                <td th:text="${floor.a1}"></td>
+                <td th:text="${floor.b1}"></td>
+                <td th:text="${floor.a2}"></td>
+                <td th:text="${floor.b2}"></td>
+                <td th:text="${floor.a3}"></td>
+                <td th:text="${floor.b3}"></td>
+                <td><a th:href="@{update/{id}(id=${floor.id})}">Edit</a></td>
+                <td><a th:href="@{delete/{id}(id=${floor.id})}">Delete</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><a href="/create">Create user</a></p>
+</div>
+</body>
+</html>

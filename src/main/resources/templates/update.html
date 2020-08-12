@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<title>Create floor</title>
+</head>
+<body>
+<form action="#" th:action="@{/update}" th:object="${floor}" method="post">
+    <label for="id">ID</label>
+    <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+    <br/>
+    <label for="a">A1</label>
+    <input type="number" th:field="*{a}" id="a" placeholder="X">
+    <br/>
+    <label for="b">B1</label>
+    <input type="number" th:field="*{b}" id="b" placeholder="Y">
+    <br/>
+    <label for="a1">A2</label>
+    <input type="number" th:field="*{a1}" id="a1" placeholder="X">
+    <br/>
+    <label for="b1">B2</label>
+    <input type="number" th:field="*{b1}" id="b1" placeholder="Y">
+    <br/>
+    <label for="a2">A3</label>
+    <input type="number" th:field="*{a2}" id="a2" placeholder="X">
+    <br/>
+    <label for="b2">B3</label>
+    <input type="number" th:field="*{b2}" id="b2" placeholder="Y">
+    <br/>
+    <label for="a3">A4</label>
+    <input type="number" th:field="*{a3}" id="a3" placeholder="X">
+    <br/>
+    <label for="b3">B4</label>
+    <input type="number" th:field="*{b3}" id="b3" placeholder="Y">
+    <input type="submit" value="Update User">
+</form>
+</body>
+</html>

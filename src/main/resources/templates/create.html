@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create floor</title>
+</head>
+<body>
+<form action="#" th:action="@{/create}" th:object="${floor}" method="post">
+    <label for="a">Point 1</label>
+    <input type="number" th:field="*{a}" id="a" placeholder="X">
+    <input type="number" th:field="*{b}" id="b" placeholder="Y">
+    <p></p>
+    <label for="a1">Point 2</label>
+    <input type="number" th:field="*{a1}" id="a1" placeholder="X">
+    <input type="number" th:field="*{b1}" id="b1" placeholder="Y">
+    <p></p>
+    <label for="a">Point 3</label>
+    <input type="number" th:field="*{a2}" id="a2" placeholder="X">
+    <input type="number" th:field="*{b2}" id="b2" placeholder="Y">
+    <p></p>
+    <label for="a">Point 4</label>
+    <input type="number" th:field="*{a3}" id="a3" placeholder="X">
+    <input type="number" th:field="*{b3}" id="b3" placeholder="Y">
+    <p></p>
+    <input type="submit" value="Create Floor">
+</form>
+</body>
+</html>
